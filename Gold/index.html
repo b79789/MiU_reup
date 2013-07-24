@@ -625,7 +625,7 @@
 	        	</div>	        		        	
 	        	
 	        	<div data-role="fieldcontain">
-		        	<label for="formEmail">Email:*</label>
+		        	<label for="formEmail" >Email:*</label>
 		        	<input type="email" name="formEmail" id="formEmail" data-clear-btn="true" class="required"/>
 	        	</div>
 	        	
@@ -637,7 +637,7 @@
 	        	<div data-role="fieldcontain">	        	
 		        	<fieldset data-role="controlgroup">
 			        	<legend>Place:*</legend>
-			        	<input type="checkbox" value="applebees" name="place-role" id="place-role1" class="required"/>
+			        	<input type="checkbox" value="applebees" name="place-role" id="place-role1"/>
 			        	<label for="place-role1">Applebee's</label>
 			        	<input type="checkbox" value="applebees" name="place-role" id="place-role2"/>
 			        	<label for="place-role2">Chili's</label>
@@ -668,18 +668,14 @@
 	        	
 	        	
 	        	<div data-role="fieldcontain">
-		        	<label for="formComments">Comments:</label>
+		        	<label for="formComments" id="formComments">Comments:</label>
 		        	<textarea></textarea>
 	        	</div>
 
 	        	<div data-role="fieldcontain">
-		        	<input type="submit" value="Submit" data-theme="e"/>
-	        	</div>
-		        <div data-role="fieldcontain">
-		        	<a href="#home" id="myCancel">Cancel</a>
-		        </div >
-		        <div>
-		        	<a id="clearMy">Clear Stored Data</a>
+		        	<input type="submit"  id="submit" value="Submit"  data-theme="e"/>
+	        	
+		        	<pre>  <a href="#home" id="myCancel" style="text-decoration:underline;  text-align:center; font-size:12pt;">Cancel</a> / <a id="clearMy" style="text-decoration:underline; text-align:center; font-size:12pt;">Clear Stored Data</a></pre>
 	        	</div>
 	        	<a href="#errorPage" id="addFormErrorLink" data-rel="dialog" data-transition="pop">Open Errors</a>
         	</form>
@@ -722,7 +718,7 @@
 
         <div data-role="content">
 	        <ul>
-		        <li></li>
+		        <li>test</li>
 	        </ul>
         </div>
     </div>

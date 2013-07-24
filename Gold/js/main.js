@@ -14,7 +14,7 @@ $("#form").on('pageinit', function(){
 			myFormErrorLink.click();
 			var html = "";
 			for(key in validator.submitted){
-				var myLabel = $("label[for^='"+ key +"']");
+				var myLabel = $("label[for^='"+ key +"']").not("[generated]");
 				var legend = myLabel.closest("fieldset").find(".ui-controlgroup-label");
 				var fieldName = legend.length ? legend.text() : myLabel.text();
 				html += "<li>" + fieldName + "</li>";
@@ -25,15 +25,34 @@ $("#form").on('pageinit', function(){
 		submitHandler: function(){
 			var data = valForm.serializeArray();
 			parseAddForm(data);
-			alert("Thank You!");
+
 		}
 		
 		
 	});
+	//rest of javascript for page
+	
+	
 	var parseAddForm = function(data){
 	//use form data here
-	console.log(data);
+		var myId = Math.floor(Math.random()*9000009);
+		// get all form value and store in object
+		var myItem               = {};
+			myItem.firstName     = ["First Name:", ge("formFirstName").value];
+			myItem.lastName      = ["Last Name:", ge("formLastName").value];
+			myItem.formEmail     = ["Email:", ge("formEmail").value];
+			myItem.formPass      = ["Password:", ge("formPass").value];
+			myItem.place1        = ["Place1:", ge("place-role1").value];
+			myItem.place2        = ["Place2:", ge("place-role2").value];
+			myItem.formHowMany   = ["How Many:", ge("formHowMany").value];
+			myItem.formDate      = ["Date:", ge("formDate").value];
+			myItem.formTime      = ["Time:", ge("formTime").value];
+			myItem.formComments  = ["Comments:", ge("formComments").value];
+		//Save data to local storage Use stringify to covert object
+		localStorage.setItem(myId, JSON.stringify(myItem));
+		alert("Reservation Saved!");
 }
+
 
 function clearUserData(){
 		if(localStorage.length === 0){
@@ -50,6 +69,8 @@ function ge(x){
 		var myElement = document.getElementById(x);
 		return myElement;
 	}
+
+	
 var clearData = ge("clearMy");
 	clearData.addEventListener("click",clearUserData);
 });
