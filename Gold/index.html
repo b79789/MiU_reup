@@ -625,19 +625,19 @@
 	        	</div>	        		        	
 	        	
 	        	<div data-role="fieldcontain">
-		        	<label for="formEmail" >Email:*</label>
+		        	<label for="formEmail" >Email:*<br><small>ex: me@gmail.com</small></label>
 		        	<input type="email" name="formEmail" id="formEmail" data-clear-btn="true" class="required"/>
 	        	</div>
 	        	
 	        	<div data-role="fieldcontain">
-		        	<label for="formPass">Password:*</label>
-		        	<input type="password" name="formPass" id="formPass" data-clear-btn="true" class="required"/>
+		        	<label for="formPass">Password:*<br><small>Password no more than 7 characters ex: abc4567</small></label>
+		        	<input type="password" name="formPass" id="formPass" maxlength="7" data-clear-btn="true" class="required"/>
 	        	</div>
 	        	
 	        	<div data-role="fieldcontain">	        	
 		        	<fieldset data-role="controlgroup">
 			        	<legend>Place:*</legend>
-			        	<input type="checkbox" value="applebees" name="place-role" id="place-role1"/>
+			        	<input type="checkbox" value="applebees" name="place-role" id="place-role1" checked="true"/>
 			        	<label for="place-role1">Applebee's</label>
 			        	<input type="checkbox" value="applebees" name="place-role" id="place-role2"/>
 			        	<label for="place-role2">Chili's</label>
@@ -663,13 +663,13 @@
 	        	</div>
 	        	
 	        	<div data-role="fieldcontain">
-		        	<label for="formTime">Enter Time:</label><input id="formTime" placeholder="12:00pm" type="time" data-clear-btn="true" class="required">
+		        	<label for="formTime">Enter Time:</label><input id="formTime" placeholder="8:00pm" type="time" data-clear-btn="true" class="required">
 	        	</div>
 	        	
 	        	
 	        	<div data-role="fieldcontain">
 		        	<label for="formComments" id="formComments">Comments:</label>
-		        	<textarea></textarea>
+		        	<textarea placeholder="Comments go here!"></textarea>
 	        	</div>
 
 	        	<div data-role="fieldcontain">
