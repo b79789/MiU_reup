@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 Brian Stacks
 MiU 1307
@@ -7,12 +6,27 @@ project3 6-5-13
 
 
 
-label.error{display: box; margin: 10px 0; color: red;}
+label.error{
+		 display: block;
+		 margin: 10px 0;
+		 color: red;
+		 padding-top: .5em;
+		 font-weight:bold; 
+}
 
-#addFormErrorLink{display: none;}
+#addFormErrorLink{
+	
+	display: none;
+}
 
-=======
-label.error{display: box; margin: 10px 0; color: red;}
+input:required + label::after{
+	
+	content: "*";
+	color: red;
+}
 
-#addFormErrorLink{display: none;}
->>>>>>> refs/heads/master
+
+#rqf{
+	font-size: smaller:
+}
+
